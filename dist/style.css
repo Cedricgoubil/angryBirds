@@ -1,0 +1,171 @@
+body {
+	background-image: url("src/sky.png")!important;
+}
+
+#start {
+    color: #00e600;
+    text-decoration:none;
+}
+
+h1 {
+    font-size: 60px!important;
+    font-family: fantasy!important;
+    text-shadow: 2px 2px 5px #e6ac00;
+    color: black;
+}
+
+#rules {
+	font: italic 18px 'arial';
+	color: black;
+	margin-left: 40px;
+	margin-top: 25px;
+	widows: 100%;;
+	display:none;
+}
+
+#toggler {
+	font: bold 15px 'arial';
+    background-color: #e6ac00;
+	border: 2px #ffffff solid;
+	color: #003399;
+	border-radius:3px;
+}
+	
+#toggler:hover {
+	background: #003399;
+	color: #e6ac00;
+    border-color: #e6ac00;
+	text-decoration:none;
+}
+
+.avatar,.info1, .info2{
+	margin: 20px;
+}
+
+label { 
+	font: normal 18px 'arial';
+	color: #e6ac00;
+}
+
+.Player1 {
+	background-color: #003399;
+    border: 3px #e6ac00 solid;
+    border-radius: 5px;
+}
+
+.Player2 {
+	background-color: #003399;
+    border: 3px #e6ac00 solid;
+    border-radius: 5px;
+}
+
+
+#map {
+	margin-left: -30px;
+    border-radius: 5px;
+    border: 30px  solid;
+    border-top-color: #00e600;
+    border-bottom-color: #ff4da6;
+    border-left-color: #ffff00;
+    border-right-color: #FE5E41;
+}
+
+#Player1, #map, #Player2{
+	display: inline-block;
+}
+
+#active { 
+	font-size:30px;
+	font-family: fantasy;
+	color: rebeccapurple;
+	position: absolute;
+	margin-left: 40px;
+}
+
+#fight {
+	font-size:30px;
+	font-family: fantasy;
+	color: #009933;
+	position: absolute;
+	margin-left: 40px;
+}
+
+#pare {
+	font: normal 20px 'arial';
+	color: black;
+	position: absolute;
+	margin-left: 40px;
+}
+
+table {
+	border-ollapse: collapse;
+}
+		
+td {
+	border: 1px #ffd966 solid;
+    background-color: #e6ac00;
+	height: 46px;
+	width: 46px;
+    box-shadow: 1px 1px 30px white;
+}
+
+#attack, #defend { 
+    display: inline-block;
+    margin-top: 60px;
+    background-color: #e6ac00;
+    font-size: 40px;
+    font-family: fantasy!important;
+    width: auto;
+}
+
+#attack:hover {
+	background: #990000;
+	color: white;
+}
+
+#defend:hover{
+	background: #29a329;
+	color: white;
+}
+
+#section { 
+    transition:all 0.3s ease-in 0s;
+    width: 420px;
+    height: 200px;
+    margin-top: -430px;
+    background-color: #003399;
+    border-radius: 5px;
+    border: 10px #e6ac00 solid;
+    opacity: 0.8;
+}
+
+.possibleSteps{
+    position: relative;
+    box-shadow: 1px 1px 30px red
+}
+
+#playAgain {
+    transition:all 0.3s ease-in 0s;
+    height: 60px;
+    margin-top: -430px;
+    opacity: 0.8;
+}
+
+
+@media(max-width:1000px) {
+
+    .Player1, .Player2, #toggler {
+        display: none;
+    }
+    
+    #active, #fight, #pare{
+        margin:40px;
+        
+    }
+    
+    h1{
+        font-size: 40px!important;
+    }
+}
+
+/********************************EVERYTHING OK HERE********************************/

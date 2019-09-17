@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <title>Angry Board game</title>
+</head>
+<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 mx-auto text-center mt-1 p-1">
+					<h1 class="title mt-2 mb-2">The Angry Board Game</h1>
+				</div>
+			</div>
+		</div>		
+        			<p><label id="active"></label></p><br>
+        			<p><label id="fight"></label></p><br>
+        			<p><label id="pare"></label></p>
+		
+		<div class="Player1 float-left ml-5">
+            <sidebar class="avatar1">
+                <p><img src="src/red.png" class="avatar" id="p1"/></p>
+                <p class="info1"><label>RED</label></p>
+                <p class="info1"><label id="p1name">Name :</label></p>
+                <p class="info1"><label id="p1weapon">Weapon :</label></p>
+                <p class="info1"><label id="p1damage">Damage :</label></p>
+                <p class="info1"><label id="p1health">Health :</label></p>
+            </sidebar>
+        </div>
+
+        <div class="Player2 float-right mr-5">
+            <sidebar class="avatar2" >
+                <p><img src="src/pig.png" class="avatar" id="p2"/></p>
+                <p class="info2"><label>PIG</label></p>
+                <p class="info2"><label id="p2name">Name : </label></p>
+                <p class="info2"><label id="p2weapon">Weapon : </label></p>
+                <p class="info2"><label id="p2damage">Force :</label></p>
+                <p class="info2"><label id="p2health">Health : </label></p>
+            </sidebar>
+		</div>
+
+
+		<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6 mx-auto text-center mt-0 p-1">
+
+		<!--<div id="page">-->
+		<div id="map">
+            <table id="gameTable">
+        		<tr>
+        			<td id = "y0x0"> </td>
+        			<td id = "y0x1"> </td>
+        			<td id = "y0x2"> </td>
+        			<td id = "y0x3"> </td>
+        			<td id = "y0x4"> </td>
+        			<td id = "y0x5"> </td>
+        			<td id = "y0x6"> </td>
+        			<td id = "y0x7"> </td>
+        			<td id = "y0x8"> </td>
+        			<td id = "y0x9"> </td>
+        		</tr>
+        		<tr>
+        			<td id = "y1x0"> </td>
+        			<td id = "y1x1"> </td>
+        			<td id = "y1x2"> </td>
+        			<td id = "y1x3"> </td>
+        			<td id = "y1x4"> </td>
+        			<td id = "y1x5"> </td>
+        			<td id = "y1x6"> </td>
+        			<td id = "y1x7"> </td>
+        			<td id = "y1x8"> </td>
+        			<td id = "y1x9"> </td>
+                </tr>
+        		<tr>
+        			<td id = "y2x0"> </td>
+        			<td id = "y2x1"> </td>
+        			<td id = "y2x2"> </td>
+        			<td id = "y2x3"> </td>
+        			<td id = "y2x4"> </td>
+        			<td id = "y2x5"> </td>
+        			<td id = "y2x6"> </td>
+        			<td id = "y2x7"> </td>
+        			<td id = "y2x8"> </td>
+        			<td id = "y2x9"> </td>
+        		</tr>
+        		<tr>
+        			<td id = "y3x0"> </td>
+        			<td id = "y3x1"> </td>
+        			<td id = "y3x2"> </td>
+        			<td id = "y3x3"> </td>
+        			<td id = "y3x4"> </td>
+        			<td id = "y3x5"> </td>
+        			<td id = "y3x6"> </td>
+        			<td id = "y3x7"> </td>
+        			<td id = "y3x8"> </td>
+        			<td id = "y3x9"> </td>
+        		</tr>
+        		<tr>
+        			<td id = "y4x0"> </td>
+        			<td id = "y4x1"> </td>
+        			<td id = "y4x2"> </td>
+        			<td id = "y4x3"> </td>
+        			<td id = "y4x4"> </td>
+        			<td id = "y4x5"> </td>
+        			<td id = "y4x6"> </td>
+        			<td id = "y4x7"> </td>
+        			<td id = "y4x8"> </td>
+        			<td id = "y4x9"> </td>
+        		</tr>
+        		<tr>
+        			<td id = "y5x0"> </td>
+        			<td id = "y5x1"> </td>
+        			<td id = "y5x2"> </td>
+        			<td id = "y5x3"> </td>
+        			<td id = "y5x4"> </td>
+        			<td id = "y5x5"> </td>
+        			<td id = "y5x6"> </td>
+        			<td id = "y5x7"> </td>
+        			<td id = "y5x8"> </td>
+        			<td id = "y5x9"> </td>
+        		</tr>
+        		<tr>
+        			<td id = "y6x0"> </td>
+        			<td id = "y6x1"> </td>
+        			<td id = "y6x2"> </td>
+        			<td id = "y6x3"> </td>
+        			<td id = "y6x4"> </td>
+        			<td id = "y6x5"> </td>
+        			<td id = "y6x6"> </td>
+        			<td id = "y6x7"> </td>
+        			<td id = "y6x8"> </td>
+        			<td id = "y6x9"> </td>
+        		</tr>
+        		<tr>
+        			<td id = "y7x0"> </td>
+        			<td id = "y7x1"> </td>
+        			<td id = "y7x2"> </td>
+        			<td id = "y7x3"> </td>
+        			<td id = "y7x4"> </td>
+        			<td id = "y7x5"> </td>
+        			<td id = "y7x6"> </td>
+        			<td id = "y7x7"> </td>
+        			<td id = "y7x8"> </td>
+        			<td id = "y7x9"> </td>
+        		</tr>
+        		<tr>
+        			<td id = "y8x0"> </td>
+        			<td id = "y8x1"> </td>
+        			<td id = "y8x2"> </td>
+        			<td id = "y8x3"> </td>
+        			<td id = "y8x4"> </td>
+        			<td id = "y8x5"> </td>
+        			<td id = "y8x6"> </td>
+        			<td id = "y8x7"> </td>
+        			<td id = "y8x8"> </td>
+        			<td id = "y8x9"> </td>
+        		</tr>
+        		<tr>
+        			<td id = "y9x0"> </td>
+        			<td id = "y9x1"> </td>
+        			<td id = "y9x2"> </td>
+        			<td id = "y9x3"> </td>
+        			<td id = "y9x4"> </td>
+        			<td id = "y9x5"> </td>
+        			<td id = "y9x6"> </td>
+        			<td id = "y9x7"> </td>
+        			<td id = "y9x8"> </td>
+        			<td id = "y9x9"> </td>
+        		</tr>
+        	</table>
+        </div>
+	
+            <section id="section" class="ajt mx-auto" style="visibility:hidden"> 
+                    <button id="attack">Attack</button>
+                    <button id="defend">Defend</button>
+			</section> 
+
+			<section id="reload" style="visibility:hidden"> 
+                    <button id="playAgain" type="button" class="btn btn-block btn-success">Play again <i class="fas fa-play"></i></button>
+            </section> 
+                   
+		</div>
+	</div>
+	</div>
+</div>	
+
+    <script src="js/players.js"></script>
+    <script src="js/board.js"></script>
+	<script src="js/game.js"></script>
+    <script src="js/fight.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+</body>
+</html>
+
+<!--********************************EVERYTHING OK HERE********************************-->
