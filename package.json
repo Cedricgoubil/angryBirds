@@ -1,16 +1,16 @@
 {
-  "name": "angrybirds",
+  "name": "dist",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://Cedricgoubil.github.io/angrybirds",
   "scripts": {
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://Cedricgoubil.github.io/angrybirds",
   "dependencies": {
-    "gh-pages": "^2.1.1"
+    "gh-pages ": "^2.1.1"
   }
 }
