@@ -1,29 +1,43 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Angry Board game</title>
-</head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Mukta"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+		<link rel="stylesheet" href="style.css" />
+		
+
 <body>
-		<div class="container-fluid">
+		<div class="container">
 			<div class="row">
-				<div class="col-md-6 mx-auto text-center mt-1 p-1">
-					<h1 class="title mt-2 mb-2">The Angry Board Game</h1>
+				<div class="col-lg-12">
+
+					<h1 class="text-center">The Angry Board Game</h1>
 				</div>
 			</div>
-		</div>		
+				
         			<p><label id="active"></label></p><br>
         			<p><label id="fight"></label></p><br>
         			<p><label id="pare"></label></p>
 		
-		<div class="Player1 float-left ml-5">
+		<div class="Player1 float-left">
             <sidebar class="avatar1">
                 <p><img src="src/red.png" class="avatar" id="p1"/></p>
                 <p class="info1"><label>RED</label></p>
@@ -34,7 +48,7 @@
             </sidebar>
         </div>
 
-        <div class="Player2 float-right mr-5">
+        <div class="Player2 float-right">
             <sidebar class="avatar2" >
                 <p><img src="src/pig.png" class="avatar" id="p2"/></p>
                 <p class="info2"><label>PIG</label></p>
@@ -46,11 +60,11 @@
 		</div>
 
 
-		<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-6 mx-auto text-center mt-0 p-1">
+		<!-- <div class="container">
+				<div class="row"> -->
+					<!-- <div class="col-md-6 mx-auto text-center"> -->
+							<div class="col-lg-12 mx-auto text-center">
 
-		<!--<div id="page">-->
 		<div id="map">
             <table id="gameTable">
         		<tr>
@@ -174,31 +188,62 @@
         			<td id = "y9x9"> </td>
         		</tr>
         	</table>
-        </div>
-	
+				</div>
+			<!-- </div>
+		</div>   -->
+	<div class="container">
             <section id="section" class="ajt mx-auto" style="visibility:hidden"> 
                     <button id="attack">Attack</button>
                     <button id="defend">Defend</button>
-			</section> 
+						</section> 
 
-			<section id="reload" style="visibility:hidden"> 
+						<section id="reload" style="visibility:hidden"> 
                     <button id="playAgain" type="button" class="btn btn-block btn-success">Play again <i class="fas fa-play"></i></button>
             </section> 
-                   
-		</div>
-	</div>
+        
+					</div>
 	</div>
 </div>	
 
     <script src="js/players.js"></script>
     <script src="js/board.js"></script>
-	<script src="js/game.js"></script>
-    <script src="js/fight.js"></script>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="js/game.js"></script>
+		<script src="js/fight.js"></script>
+		<script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+		<script src="https://kit.fontawesome.com/bbfdbbb7a3.js"></script>
+	</body>
+	</html>
+		<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <title>Angry Board game</title>
+</head> -->
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
  
-</body>
-</html>
+
 
 <!--********************************EVERYTHING OK HERE********************************-->
